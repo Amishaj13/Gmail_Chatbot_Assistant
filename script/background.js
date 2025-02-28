@@ -1,21 +1,3 @@
-// background.js
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//     if(request.action === "showPopup") {
-      
-//             chrome.windows.create({
-//                 url: chrome.runtime.getURL('popup.html'),
-//                 type: 'popup',
-//                 width: 400,
-//                 height: 500,
-//                 top: 100,
-//                 left: 100
-//             }, function(window) {
-//                 // Handle popup creation
-//             });
-            
-            
-//     }
-// });
 
 let retryCount = 0;
 const MAX_RETRIES = 3;
