@@ -24,7 +24,7 @@ llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=GOOGLE_API_K
 # Chat Prompt
 prompt_template = ChatPromptTemplate.from_messages([
     ("user", "You are an AI assistant specializing in drafting professional emails and LinkedIn messages. Your goal is to generate clear, concise, and relevant responses based on user input."),
-    # ("user", "If the request contains references to existing information (e.g., extracted document text), use that data to improve accuracy. Do not generate information that is not provided."),
+    ("user", "If the request contains references to existing information (e.g., extracted document text), use that data to improve accuracy. Do not generate information that is not provided."),
     ("user", "If the request is unclear or lacks enough context, ask for clarification instead of making assumptions."),
     ("user", "Latest email content: {latest_email_content}"),
     ("user", "Request: {message}")
