@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Email Draft Chatbot",
+  "version": "1.0",
+  "description": "A chatbot to draft emails using Gmail and OpenAI.",
+  "permissions": ["storage", "windows","activeTab", "scripting"],
+  "host_permissions": [
+    "*://mail.google.com/*"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "scripts/popup.html"
+  },
+  "web_accessible_resources": [{
+    "resources": ["scripts/popup.html"],
+    "matches": ["<all_urls>"]
+}]
+}
