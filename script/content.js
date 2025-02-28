@@ -118,17 +118,6 @@ function sendEmailContent() {
     });
 }
 
-// Ensure the script runs on the current window/tab and extract email content after a delay
-// window.onload = function() {
-//     setTimeout(() => {
-//         if (window.location.href.includes("mail.google.com")) {
-//             sendEmailContent();
-//         } else {
-//             console.warn("Not on a Gmail page, skipping content extraction.");
-//         }
-//     }, 2000); // Delay to ensure Gmail UI is fully rendered
-// };
-
 // Function to initialize the button and observer
 function initializeExtension() {
     // Create and append button if it doesn't exist
